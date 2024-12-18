@@ -2,7 +2,9 @@
 
 import Link from "next/link";
 import { motion } from "framer-motion";
-import { Twitter, Mail, Share } from "lucide-react";
+import { Mail } from "lucide-react";
+import { FaDiscord } from "react-icons/fa"; // Discord icon from react-icons
+import { AiOutlineTwitter } from "react-icons/ai"; // Use as X logo (from react-icons)
 
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
@@ -24,7 +26,8 @@ export default function Footer() {
           <div className="space-y-4">
             <h2 className="text-2xl font-bold text-white">Crypto Edu</h2>
             <p className="text-sm">
-              Empowering you with the knowledge to master cryptocurrency and blockchain.
+              Empowering you with the knowledge to master cryptocurrency and
+              blockchain.
             </p>
             <ul className="space-y-2 mt-4">
               <li>
@@ -45,24 +48,25 @@ export default function Footer() {
               </li>
             </ul>
             <div className="flex space-x-4">
+              {/* Discord */}
               <Link
                 href="https://discord.com/invite/example"
                 aria-label="Discord"
               >
-                <Share className="h-6 w-6 hover:text-blue-400 transition-colors" />
+                <FaDiscord className="h-6 w-6 hover:text-blue-400 transition-colors" />
               </Link>
-              <Link
-                href="https://twitter.com/example"
-                aria-label="Twitter"
-              >
-                <Twitter className="h-6 w-6 hover:text-blue-400 transition-colors" />
+              {/* X */}
+              <Link href="https://twitter.com/example" aria-label="X">
+                <AiOutlineTwitter className="h-6 w-6 hover:text-blue-400 transition-colors" />
               </Link>
             </div>
           </div>
 
           {/* Educational Resources Section */}
           <div>
-            <h3 className="text-lg font-semibold mb-4 text-white">Learn Crypto</h3>
+            <h3 className="text-lg font-semibold mb-4 text-white">
+              Learn Crypto
+            </h3>
             <ul className="space-y-2">
               <li>
                 <Link
@@ -97,7 +101,8 @@ export default function Footer() {
               Stay Updated
             </h3>
             <p className="text-sm mb-4">
-              Subscribe to our newsletter for the latest crypto insights and educational content.
+              Subscribe to our newsletter for the latest crypto insights and
+              educational content.
             </p>
             <form className="space-y-2">
               <Input
